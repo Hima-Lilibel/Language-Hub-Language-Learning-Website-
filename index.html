@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Hub - Modern Redesign</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4fa3c6, #357c94);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+
+        nav {
+            background: #e2f4f8;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2b6673;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #c4e8ee;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #357c94;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        .languages-list li {
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact a {
+            color: #2b6673;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #357c94;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .submit-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .submit-section input[type="submit"] {
+            background: #4fa3c6;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-section input[type="submit"]:hover {
+            background: #357c94;
+        }
+
+        @media(max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LANGUAGE HUB</h1>
+    <p>Your Smart Online Language Learning Companion</p>
+</header>
+
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#languages">Languages</a>
+    <a href="#program">Program</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="box" id="overview">
+        <h2>Overview</h2>
+        <p>Language Hub is a smart learning platform that offers interactive lessons, quizzes, flashcards, and personalised learning paths to help you master any language effectively.</p>
+    </div>
+
+    <div class="box" id="program">
+        <h2>How Our Program Works</h2>
+        <ul>
+            <li>Level assessment test</li>
+            <li>Interactive audio-text lessons</li>
+            <li>Flashcards and daily quizzes</li>
+            <li>Weekly progress tracking</li>
+        </ul>
+    </div>
+
+    <div class="box" id="languages">
+        <h2>Available Languages</h2>
+        <ol class="languages-list">
+            <li>English</li>
+            <li>French</li>
+            <li>German</li>
+            <li>Spanish</li>
+        </ol>
+    </div>
+
+    <div class="box">
+        <h2>Our Features</h2>
+        <ul>
+            <li>Vocabulary flashcards</li>
+            <li>Grammar guides</li>
+            <li>Practice quizzes</li>
+            <li>Audio pronunciation</li>
+        </ul>
+    </div>
+
+    <div class="box submit-section">
+        <h2>Select Your Language</h2>
+        <form>
+            <label><input type="radio" name="choose"> English</label>
+            <label><input type="radio" name="choose"> French</label>
+            <label><input type="radio" name="choose"> German</label>
+            <label><input type="radio" name="choose"> Spanish</label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="box" id="contact">
+        <h2>Quick Contact</h2>
+        <div class="contact">
+            <a href="mailto:languagehub@gmail.com">Email Us</a>
+            <a href="tel:9876543210">Call Now</a>
+            <a href="#">Follow on Instagram</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 LANGUAGE HUB | All Rights Reserved</p>
+</footer>
+
+<!-- JavaScript Review Box Section -->
+<script>
+    // Create a new review box using DOM
+    const reviewBox = document.createElement("div");
+    reviewBox.className = "box";
+
+    // Title
+    const title = document.createElement("h2");
+    title.textContent = "Write a Review";
+    reviewBox.appendChild(title);
+
+    // Textarea
+    const textarea = document.createElement("textarea");
+    textarea.placeholder = "Write your review here...";
+    textarea.style.width = "100%";
+    textarea.style.height = "100px";
+    textarea.style.padding = "10px";
+    textarea.style.borderRadius = "5px";
+    textarea.style.border = "1px solid #ccc";
+    reviewBox.appendChild(textarea);
+
+    // Button
+    const btn = document.createElement("button");
+    btn.textContent = "Submit Review";
+    btn.style.marginTop = "10px";
+    btn.style.padding = "10px 15px";
+    btn.style.border = "none";
+    btn.style.background = "#4fa3c6";
+    btn.style.color = "white";
+    btn.style.borderRadius = "5px";
+    btn.style.cursor = "pointer";
+    reviewBox.appendChild(btn);
+
+    // Add review box below main container
+    document.body.insertBefore(reviewBox, document.querySelector("footer"));
+
+    // Button action
+    btn.addEventListener("click", function() {
+        if (textarea.value.trim() === "") {
+            alert("Please write a review before submitting!");
+        } else {
+            alert("Thank you for your review!");
+            textarea.value = "";
+        }
+    });
+</script>
+
+</body>
+</html>
