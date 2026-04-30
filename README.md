@@ -31,5 +31,5 @@ Language Hub is a simple and user-friendly language learning website built using
 - Include more languages and content
 - Improve UI design and responsiveness
 
-## 👩‍💻 Author
+## Author
 First-year CSE student passionate about web development
